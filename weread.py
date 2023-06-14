@@ -372,14 +372,18 @@ def calculate_book_str_id(book_id):
     return result
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("weread_cookie")
-    parser.add_argument("notion_token")
-    parser.add_argument("database_id")
-    options = parser.parse_args()
-    weread_cookie = options.weread_cookie
-    database_id = options.database_id
-    notion_token = options.notion_token
+#     parser = argparse.ArgumentParser()
+#     parser.add_argument("weread_cookie")
+#     parser.add_argument("notion_token")
+#     parser.add_argument("database_id")
+#     options = parser.parse_args()
+#     weread_cookie = options.weread_cookie
+#     database_id = options.database_id
+#     notion_token = options.notion_token
+    weread_cookie = '
+pgv_pvid=3075781324; RK=PRhdF7Ne4L; ptcz=a550edd57f7d632f808ebe13d4647a3d6858e77531157e8d94bc1d890ac6931d; pac_uid=0_929c15c8077dd; tvfe_boss_uuid=2e93ce1fbdd292dd; wr_fp=4266395810; wr_gid=299107623; wr_vid=11649334; wr_skey=SyAhaVCE; wr_pf=1; wr_rt=web%40R3EuzQx48EE32Ni9c66_AL; wr_localvid=27032ae06b1c13627016374; wr_name=zxx; wr_avatar=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FQ3auHgzwzM5nibvguia540ATGFZso2UD048jTVZIMR7ic58YYId2zTosWUrXbTJNfBEQKV199wpKwKJQkuH8tcoXA%2F132; wr_gender=1'
+    database_id = '588aecc99fb7495b8a664b145d456d77'
+    notion_token = 'secret_H7sRkBsboRzgvafbVPc6DbXEPneLw89zBi5fT1hihEt'
     session = requests.Session()
     session.cookies = parse_cookie_string(weread_cookie)
     client = Client(
